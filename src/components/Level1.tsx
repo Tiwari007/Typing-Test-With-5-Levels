@@ -3,7 +3,7 @@ import styles from '@/app/page.module.css'
 import classnames from "classnames";
 import _ from "lodash";
 
-const targetParagraph = "a quick brown fox jumps over the lazy dog";
+const targetParagraph = "a quick brown fox jumps over the lazy dog.";
 const initialTime = 0;
 
 function Level1({ onComplete, onQuit }: any) {
@@ -58,9 +58,6 @@ function Level1({ onComplete, onQuit }: any) {
       console.log("game end");
       endGame();
     }
-
-    // console.log("time", time, isRunning);
-    
   }, [isRunning, time]);
 
 
@@ -68,7 +65,7 @@ function Level1({ onComplete, onQuit }: any) {
 
   return (
     <div className={styles["typing-test-game"]}>
-      <h1 style={{margin: "20px 0"}}>Level 1</h1>
+      <h1 style={{margin: "20px 0"}}>Level 1 (EASY)</h1>
       <div className={styles["target-paragraph"]}>
         {targetParagraph.split("").map((char, index) => (
           <span
@@ -108,7 +105,6 @@ function Level1({ onComplete, onQuit }: any) {
           <div className={styles.btns}>
             <button className={styles.btn} onClick={startGame}>🔁 Retry</button>
             <button className={styles.btn} onClick={onComplete}>⏩ Next Level</button>
-            <button className={styles.btn} onClick={onQuit}>🚪 Exit</button>
           </div>
         </>
       )}

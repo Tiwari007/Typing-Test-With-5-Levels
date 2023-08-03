@@ -3,10 +3,11 @@ import styles from '@/app/page.module.css'
 import classnames from "classnames";
 import _ from "lodash";
 
-const targetParagraph = "a quick brown fox jumps over the lazy dog";
+// const targetParagraph = "Mr. Jock, TV quiz PhD, bags few lynx.";
+const targetParagraph = "Jock";
 const initialTime = 0;
 
-function Level5({ onComplete, onQuit }: any) {
+function Level5({ onComplete }: any) {
   const [inputText, setInputText] = useState("");
   const [time, setTime] = useState(initialTime);
   const [isRunning, setIsRunning] = useState(false);
@@ -55,10 +56,9 @@ function Level5({ onComplete, onQuit }: any) {
       return () => clearTimeout(timerId);
     }
     else if (inputText.length === targetParagraph.length) {
+      console.log("game end");
       endGame();
     }
-
-    
   }, [isRunning, time]);
 
 
@@ -66,7 +66,7 @@ function Level5({ onComplete, onQuit }: any) {
 
   return (
     <div className={styles["typing-test-game"]}>
-      <h1 style={{margin: "20px 0"}}>Level 5</h1>
+      <h1 style={{margin: "20px 0"}}>Level 5 (SAMURAI)</h1>
       <div className={styles["target-paragraph"]}>
         {targetParagraph.split("").map((char, index) => (
           <span
@@ -106,7 +106,6 @@ function Level5({ onComplete, onQuit }: any) {
           <div className={styles.btns}>
             <button className={styles.btn} onClick={startGame}>🔁 Retry</button>
             <button className={styles.btn} onClick={onComplete}>⏩ Next Level</button>
-            <button className={styles.btn} onClick={onQuit}>🚪 Exit</button>
           </div>
         </>
       )}
