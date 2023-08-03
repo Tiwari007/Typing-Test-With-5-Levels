@@ -10,7 +10,7 @@ import Level4 from './Level4';
 import Level5 from './Level5';
 
 const TypingTestGame = () => {
-  const [currentLevel, setCurrentLevel] = useState(5);
+  const [currentLevel, setCurrentLevel] = useState(1);
 
   const router = useRouter()
 

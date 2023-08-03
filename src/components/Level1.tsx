@@ -6,7 +6,7 @@ import _ from "lodash";
 const targetParagraph = "a quick brown fox jumps over the lazy dog.";
 const initialTime = 0;
 
-function Level1({ onComplete, onQuit }: any) {
+function Level1({ onComplete }: any) {
   const [inputText, setInputText] = useState("");
   const [time, setTime] = useState(initialTime);
   const [isRunning, setIsRunning] = useState(false);

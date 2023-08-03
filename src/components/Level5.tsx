@@ -3,8 +3,8 @@ import styles from '@/app/page.module.css'
 import classnames from "classnames";
 import _ from "lodash";
 
-// const targetParagraph = "Mr. Jock, TV quiz PhD, bags few lynx.";
-const targetParagraph = "Jock";
+const targetParagraph = "Mr. Jock, TV quiz PhD, bags few lynx.";
+// const targetParagraph = "Jock";
 const initialTime = 0;
 
 function Level5({ onComplete }: any) {
